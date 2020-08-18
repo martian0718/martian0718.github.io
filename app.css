@@ -1,0 +1,203 @@
+body {
+	background: #000c18;
+	font-family: "Nunito", sans-serif;
+}
+
+h5 {
+	color: #1a8b30;
+}
+
+p {
+	font-size: 20px;
+}
+
+li {
+	color: #b0b8bf;
+	list-style-type: none;
+}
+
+a {
+	color: #1a8b30;
+}
+
+li a {
+	color: #b0b8bf;
+}
+
+li a:hover {
+	color: #1a8b30;
+	text-decoration: none;
+}
+
+span {
+	display: inline-block;
+	opacity: 0;
+	transition: 0.2s linear;
+	text-align: center;
+	margin-left: 20px;
+	color: #1a8b30;
+}
+
+
+.contacts {
+	position: fixed;
+	bottom: 0px;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #1a8b30;
+
+}
+
+.rightOrientation li {
+	display: inline;
+	color: #b0b8bf;
+	padding-left: 25px;
+}
+
+.leftOrientation li {
+	display: inline;
+	color: #b0b8bf;
+	padding-right: 25px;
+}
+
+.outro ul li {
+	display: inline-block;
+}
+
+.helpers li {
+	display: inline-block;
+	padding-right: 10px;
+}
+
+.description {
+	z-index: 2;
+	margin-top: 30px;
+	padding: 25px;
+	font-size: 18px;
+	background-color: #051336; 
+	color: #b0b8bf;
+	border-radius: 5px;
+	box-shadow: rgba(2,12,27,0.7);
+	border-color: #051336;
+}
+
+.projectTitle {
+	color: #b0b8bf;
+	font-family: 'Share Tech Mono', monospace;
+}
+
+.featuredProject {
+	color: #1a8b30;
+	padding-top: 20px;
+	padding-bottom: 5px;
+}
+
+.bootstrapimg {
+	width: 70px;
+}
+
+.profilePic {
+	border-radius: 50%;
+	width: 450px;
+	height: 450px;
+	
+}
+
+.icon {
+	background: #1a8b30;
+	border-radius: 70%;
+	width: 175px;
+	height: 175px;
+}
+
+.whatIDo {
+	color: white;
+}
+
+#resume {
+	font-family: 'Share Tech Mono', monospace;
+	color: #1a8b30;
+}
+
+#app {
+	color: #1a8b30;
+	font-size: 40px;
+	font-family: 'Share Tech Mono', monospace;
+	opacity: 1;
+}
+
+
+.realBody {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.intro {
+	font-family: 'Share Tech Mono', monospace;
+}
+
+.email {
+	color: #1a8b30;
+	border: #1a8b30;
+	margin-top: 5px;
+}
+
+.aboutMe {
+	color: #e6f1ff;
+}
+
+
+#mainNav .navbar-brand {
+	color: #ffffff;
+	font-size: 1.5rem;
+	font-weight: 100;
+}
+
+#mainNav {
+	font-size: 1.5rem;
+	font-weight: 100;
+}
+
+#mainNav .nav-link {
+	color: #ffffff;
+}
+
+#mainNav .nav-link:hover {
+	color: #1a8b30;
+}
+
+
+.content {
+	margin-top: 100px;
+}
+
+.navbar.scrolled {
+	background: #727370;
+	transition: background 500ms;
+}
+
+.fade {
+	opacity: 1;
+}
+
+
+
+
+
+@media (max-width: 1200px) {
+	#headingGroup h1 {
+	font-weight: 100;
+	font-size: 3rem;
+
+	}
+}
+
+@media (max-width: 1026px) {
+	.contacts { display: none; }
+	
+}
+
+
+
