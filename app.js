@@ -4,7 +4,7 @@
   var $document = $(document);
   var $aboutMe = $(".aboutMe");
 
- 
+
 
   $(window).on("load",function() {
     $(window).scroll(function() {
@@ -12,7 +12,7 @@
       $(".fade").each(function() {
         /* Check the location of each desired element */
         var objectBottom = $(this).offset().top + $(this).outerHeight()-100;
-        
+
         /* If the element is completely within bounds of the window, fade it in */
         if (objectBottom < windowBottom) { //object comes into view (scrolling down)
           if ($(this).css("opacity")==0) {$(this).fadeTo(333,1);}
@@ -26,15 +26,15 @@
   $(window).on("load", function(){
     if($(window).width() < 500 ){
         $("h4.introAbout").removeClass("w-50").addClass("w-75");
-      
+
     }
 
-    
+
   });
 
   //$(".bootstrapimg").css("width","70px");
 
-  
+
 
  $document.ready(function(){
 
@@ -85,13 +85,19 @@
     waitUntilVisible: true
   }).go();
 
+  const instance2 = new TypeIt('#hobbiecoming', {
+    strings: 'Hobbies page coming soon...',
+    speed: 75,
+    waitUntilVisible: true
+  }).go();
+
 
 
 
 
   $(".fa-github.sideIcons").hover(function(){
       $(".one").css("opacity",1);
-      
+
   }, function(){
       $(".one").css("opacity",0);
   });
@@ -99,7 +105,7 @@
 
   $(".fa-linkedin-in.sideIcons").hover(function(){
     $(".two").css("opacity",1);
-    
+
 }, function(){
     $(".two").css("opacity",0);
 });
@@ -107,7 +113,7 @@
 
 $(".fa-instagram.sideIcons").hover(function(){
     $(".three").css("opacity",1);
-    
+
 }, function(){
     $(".three").css("opacity",0);
 });
@@ -115,7 +121,7 @@ $(".fa-instagram.sideIcons").hover(function(){
 
 $(".fa-twitter.sideIcons").hover(function(){
     $(".four").css("opacity",1);
-    
+
 }, function(){
     $(".four").css("opacity",0);
 });
@@ -123,8 +129,7 @@ $(".fa-twitter.sideIcons").hover(function(){
 
 $(".fa-youtube.sideIcons").hover(function(){
     $(".five").css("opacity",1);
-    
+
 }, function(){
     $(".five").css("opacity",0);
 });
-
