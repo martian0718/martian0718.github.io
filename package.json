@@ -1,0 +1,25 @@
+{
+  "name": "online-resume",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martian0718/martian0718.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martian0718/martian0718.github.io/issues"
+  },
+  "homepage": "https://github.com/martian0718/martian0718.github.io#readme",
+  "dependencies": {
+    "jquery-timelineme": "^0.1.7"
+  }
+}
