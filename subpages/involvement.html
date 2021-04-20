@@ -25,10 +25,10 @@
     <script src="https://cdn.jsdelivr.net/npm/typeit@VERSION_NUMBER/dist/typeit.min.js"/></script>
 
     <script src= "../lib/typeit.min.js"></script>
-    <link rel="stylesheet" href="style-albe-timeline.css" />
+    <link rel="stylesheet" href="../node_modules/jquery-timelineme/src/jquery.timelineMe.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
-    <script src="jquery-albe-timeline.min.js"></script>
+
 
     <title>Martin Wu</title>
   </head>
@@ -61,10 +61,10 @@
 
         <ul class= "nav navbar-nav ml-auto">
 
-          <li class="nav-item" id = "aboutLink"><a href="#section2" class="nav-link">ABOUT</a></li>
-          <li class="nav-item" id = "resumeLink"><a href="#resume" class="nav-link">RESUME</a></li>
-          <li class = "nav-item" id = "projectsLink"><a href="#projects" class = "nav-link">PROJECTS</a></li>
-          <li class = "nav-item" id = "projectsLink"><a href="./subpages/involvement.html" class = "nav-link">INVOLVEMENT</a></li>
+          <li class="nav-item" id = "aboutLink"><a href="../index.html#section2" class="nav-link">ABOUT</a></li>
+          <li class="nav-item" id = "resumeLink"><a href="../index.html#resume" class="nav-link">RESUME</a></li>
+          <li class = "nav-item" id = "projectsLink"><a href="../index.html#projects" class = "nav-link">PROJECTS</a></li>
+          <li class = "nav-item" id = "projectsLink"><a href="#" class = "nav-link">INVOLVEMENT</a></li>
 
 
         </ul>
@@ -78,22 +78,15 @@
 <!-- end of nav bar-->
 
     <section class = "container-fluid my-5 py-5" id = "scroll-section2">
-    <div class="timeline-container timeline-theme-1">
-      <div class="timeline js-timeline">
-        <div data-time="2017">your content or markup</div>
-        <div data-time="2016">your content or markup</div>
-        <div data-time="2015">your content or markup</div>
-        <div data-time="2014">your content or markup</div>
-        <div data-time="2013">your content or markup</div>
-      </div>
-    </div><!-- /.timeline-container -->
-  </section>
+      <div id="timeline-container"></div>
+    </section>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src= "../app.js"></script>
+    <script src="../node_modules/jquery-timelineme/src/jquery.timelineMe.js"></script>
 
     <script type="text/javascript">
       $(function () {
@@ -102,9 +95,68 @@
           $nav.toggleClass("scrolled", $(this).scrollTop()>$nav.height());
         })
       })
-      $(function() {
-        $('.js-timeline').Timeline();
-      });
+      $(document).ready(function() {
+
+        var relPosDate1 = new Date(2018, 06, 11);
+        var relPosDate2 = new Date(2018, 09, 23);
+        var relPosDate3 = new Date(2019, 05, 11);
+        var relPosDate4 = new Date(2020, 06, 11);
+        var relPosDate5 = new Date(2020, 09, 10);
+        var relPosDate6 = new Date(2020, 10, 01);
+        var relPosDate7 = new Date(2020, 03, 10);
+        $('#timeline-container').timelineMe({
+        labelClass: 'labelClass',
+        shortContentClass: 'shortContentClass',
+        fullContentClass: 'fullContentClass',
+		    items: [
+                // Put your timeline items here
+
+                {
+                  type: 'smallItem',
+                  label: 'April/June 2018',
+                  shortContent: 'Received the <a href="https://www.teamunify.com/onsbcst/UserFiles/File/Paul%20E%20Tsongas%20Bumblebee%20Award%202017-2018.pdf">Bumblebee Award</a>',
+                  fullContent: 'Received the <a href="https://www.teamunify.com/onsbcst/UserFiles/File/Paul%20E%20Tsongas%20Bumblebee%20Award%202017-2018.pdf">Bumblebee Award</a> and graduated from Newport High School',
+                  showMore: '<a class="custom-show-btn"><img src="https://img.icons8.com/flat-round/32/000000/plus.png"/></a>',
+                  showLess: '<a class="custom-show-btn"><img src="https://img.icons8.com/officel/32/000000/minus.png"/></a>',
+                  relativePosition: relPosDate1.getTime()
+                },
+                {
+                    type: 'smallItem',
+                    label: 'Fall 2018',
+                    shortContent: 'Started undergrad at Santa Clara University',
+                    relativePosition: relPosDate2.getTime()
+                },
+                {
+                  type: 'smallItem',
+                  label: 'May 2019',
+                  shortContent: 'Became Vice-President/Captain for SCU Club Swim',
+                  relativePosition: relPosDate3.getTime()
+                },
+                {
+                  type: 'smallItem',
+                  label: 'March 2020',
+                  shortContent: 'Covid-19 HITS :(',
+                  relativePosition: relPosDate7.getTime()
+                },
+                {
+                  type: 'smallItem',
+                  label: 'June 2020',
+                  shortContent: 'Transferred out of Santa Clara University',
+                  relativePosition: relPosDate4.getTime()
+                },
+                {
+                  type: 'smallItem',
+                  label: 'September 2020',
+                  shortContent: 'Started School at Seattle University',
+                  fullContent: 'Started School at Seattle University, Joined SU-ACM as part of leadership, Swam with BCST College Training Group',
+                  showMore: '<a class="custom-show-btn"><img src="https://img.icons8.com/flat-round/32/000000/plus.png"/></a>',
+                  showLess: '<a class="custom-show-btn"><img src="https://img.icons8.com/officel/32/000000/minus.png"/></a>',
+                  relativePosition: relPosDate5.getTime()
+                }
+
+            ]
+		});
+    });
     </script>
 
 
