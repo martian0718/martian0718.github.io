@@ -26,8 +26,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
     <link rel="stylesheet" href="../jquery-timelineme/src/jquery.timelineMe.css">
-
-
+    <link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.2.14/dist/jBox.all.min.css" rel="stylesheet">
+    <link href="../lightslider/src/lightslider.css"/>
     <title>Martin Wu</title>
   </head>
 
@@ -80,8 +80,121 @@
       <div id="timeline-container"></div>
     </section>
 
+    <section class = "container-fluid my-5 py-5" id = "scroll-section2">
+
+
+      <div class = "row align-items-center py-5">
+        <div class="col-lg-12">
+          <h1 class = "text-center" style="color:#1a8b30">Current Projects and Involvement</h1>
+        </div>
+      </div>
+
+
+      <div class = "row align-items-center py-5">
+        <div class="col-lg-12">
+          <div class="card-deck">
+
+            <div class="card border-success" id="prepa">
+              <img src="../media/prePAwebsite.png" class = "card-image">
+            </div>
+
+            <div class="card border-success" id="2gether">
+              <h1 class = "text-center mt-5 pt-5 align-bottom">Swim2Gether</h1>
+            </div>
+
+            <div class="card border-success" id="piras">
+              <img src="../media/rasberrypi.png" class = "card-image">
+            </div>
+
+          </div>
+        </div>
+      </div>
+<!--
+      <div class = "row align-items-center py-5">
+        <div class="col-lg-12">
+          <div class="card-deck">
+
+            <div class="card border-success" id="acm">
+              <img src="../media/suacm.JPG" class = "card-image">
+            </div>
+
+            <div class="card border-success" id="machineLearn">
+              <h1 class = "text-center mt-5 pt-5 align-bottom">CPSC 4300 ML Project</h1>
+            </div>
+
+            <div class="card border-success" id="philosophy">
+              <h1 class = "text-center mt-5 pt-5 align-bottom">SUPC</h1>
+            </div>
+
+          </div>
+        </div>
+      </div>
+-->
+
+    </section>
+
+
+    <!--Content that will pop up when clicked-->
+
+    <div style="display: none">
+
+      <!--Pre PA Website-->
+      <div id="paClub">
+        <h2>A website I've been working on for a friend at Santa Clara University.</h2>
+        <p>
+          He had a desire to start his own club for students interested in becoming a PA
+          in the future. But he wants to make the club easily accessible and have resources
+          online for students just like himself, so he asked me to help make a website for his club.
+          Technologies that I'm using on this is HTML, CSS, Bootstrap to make the site look
+          prettier, and git to collaborate with my friend who found this club.
+        </p>
+      </div>
+
+      <!--Swim2Gether-->
+      <div id="swim2">
+        <h2>A SaaS I've been working on with other swimmers and ex-athletes from around the country.</h2>
+        <p>
+          We are a creating a social network for teams, coaches, parents, and athletes which ties
+          managing compeitions, teams administrations, and sharing results into a single platform. My role
+          is to help develop this idea into reality as I'm learning how to use the MERN stack to develop
+          this project.
+        </p>
+      </div>
+
+      <!--Personal Project-->
+      <div id="raspberry">
+        <h2>A personal project of mine as I'm interested in working with IoT.</h2>
+        <p>
+          I recently got a Raspberry Pi to experiment with and am using Python to work with it.
+          I haven't done much with it, but am expecting to use it more as I have more free time.
+          Once I've made a small project out of it, I'll be sure to put it out there!
+        </p>
+      </div>
+
+      <!---->
+      <div id="suacm">
+        <h2>Seattle University ACM</h2>
+        <p>
+          I recently got a Raspberry Pi to experiment with and am using Python to work with it.
+          I haven't done much with it, but am expecting to use it more as I have more free time.
+          Once I've made a small project out of it, I'll be sure to put it out there!
+        </p>
+      </div>
+
+
+    </div>
+
+
+    <!--End of Content-->
+
+
+
+
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script type = "text/javascript" src="../lib/jquery-3.4.1.min.js"></script>
+    <script src="../lightslider/src/lightslider.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.2.14/dist/jBox.all.min.js"></script>
     <script type = "text/javascript" src="../jquery-timelineme/src/jquery.timelineMe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
@@ -90,7 +203,38 @@
 
     <script type="text/javascript">
     $(document).ready(function() {
-
+      var paClub = new jBox('Modal', {
+                      attach: '#prepa',
+                      title: 'SCU Pre-PA Club Website',
+                      content: $('#paClub')
+                    });
+      var swim2 = new jBox('Modal', {
+                      attach: '#2gether',
+                      title: 'Swim2Gether',
+                      content: $('#swim2')
+                    });
+      var raspberry = new jBox('Modal', {
+                      attach: '#piras',
+                      title: 'Raspberry PI Personal Project',
+                      content: $('#raspberry')
+                    });
+      /*
+      var suacm = new jBox('Modal', {
+                      attach: '#acm',
+                      title: 'Seattle U ACM',
+                      content: $('#suacm')
+                    });
+      var machineL = new jBox('Modal', {
+                      attach: '#machineLearn',
+                      title: 'CPSC 4310 Project',
+                      content: $('#machineL')
+                    });
+      var supc = new jBox('Modal', {
+                      attach: '#philosophy',
+                      title: 'Seattle U Philosophy Club',
+                      content: $('#supc')
+                    });
+      */
       var relPosDate1 = new Date(2018, 06, 11);
       var relPosDate2 = new Date(2018, 09, 23);
       var relPosDate3 = new Date(2019, 05, 11);
